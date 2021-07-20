@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Titillium+Web:wght@200&display=swap');
+body{
+    background-image: url(redcalc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.app{
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 90px repeat(5,80px);
+    margin: 0 auto;
+    width: 500px;
+    grid-template-areas: 
+    "res res res res" 
+    "9 8 7 reset"
+    "6 5 4 reset"
+    "3 2 1 reset"
+    "0 dot plus minus"
+    "equal equal times  div";
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border: solid white 4px;
+
+}
+button{
+    background-color:transparent;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1em;
+    font-family:'Orbitron';
+    border-color: white;
+}
+button:hover{
+    background-color: rgb(214, 12, 12);
+
+}
+#equal{
+    grid-area: equal;
+}
+#clear{
+    grid-area: reset;
+}
+h3{
+    font-family:'Orbitron';
+    text-align: right;
+    grid-area:res;
+    font-size: 3rem;
+    margin: 10px 20px 0 0;
+    color: white;
+}
